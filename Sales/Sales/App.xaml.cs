@@ -13,7 +13,7 @@ namespace Sales
 		{
 			InitializeComponent();
 
-			MainPage = new ProductsPages();
+			MainPage = new NavigationPage(new ProductsPages());
 		}
 
 		protected override void OnStart ()

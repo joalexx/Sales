@@ -11,14 +11,43 @@ namespace Sales.Common.Models
         public int ProductId { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string Description { get; set; }
 
+
+        [DataType(DataType.MultilineText)]       
+        public string Remarsk { get; set; }
+
+
+        [Display(Name ="Imagen")]
+        public string ImagePath { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public Decimal Price { get; set; }
 
+
+        [Display(Name = "Is Available")]
         public bool IsAvailable { get; set; }
 
+        
+        [Display(Name = "Publish On")]
+        [DataType(DataType.Date)]
         public DateTime PublishOn { get; set; }
 
+
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.ImagePath))
+                {
+                    return "icon_null";
+                }
+
+                return $"https://salesbackend-joalexx.azurewebsites.net/{this.ImagePath.Substring(1)}";
+            }
+
+        }
         public override string ToString()
         {
             return this.Description;
