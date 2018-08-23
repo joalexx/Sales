@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sales.Helpers
+﻿namespace Sales.Helpers
 {
-    using Xamarin.Forms;
     using Interfaces;
     using Resources;
+    using Xamarin.Forms;
     public static class Languages
     {
         static Languages()
@@ -34,6 +30,35 @@ namespace Sales.Helpers
         public static string TurnOnInternet
         {
             get { return Resource.TurnOnInternet; }
+        }
+
+        public static string AddProduct
+        {
+            get { return Resource.AddProduct; }
+        }
+        public static string Description
+        {
+            get { return Resource.Description; }
+        }
+        public static string DescriptionPlaceHolder
+        {
+            get { return Resource.DescriptionPlaceHolder; }
+        }
+        public static string Price
+        {
+            get { return Resource.Price; }
+        }
+        public static string PricePlaceHolder
+        {
+            get { return Resource.PricePlaceHolder; }
+        }
+        public static string Remarsk
+        {
+            get { return Resource.Remarsk; }
+        }
+        public static string Save
+        {
+            get { return Resource.Save; }
         }
     }
 }

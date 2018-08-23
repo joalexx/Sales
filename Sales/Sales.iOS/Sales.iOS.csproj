@@ -163,4 +163,7 @@
       <Name>Sales</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_action_add_box.png" />
+  </ItemGroup>
 </Project>
